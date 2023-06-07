@@ -15,38 +15,50 @@
       </nav>
       <hr>
       <br><br>
-      <center>
-      <form action="?" method="POST" class="col-sm-4 ">
+     
+      <form action="/student" method="POST" class="container">
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">Grade : </label>
-          <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="1 - 12" pattern="[0-1]{1}[0-9]{1}" required>
-          <label for="exampleFormControlInput1" class="form-label">Section/Division : </label>
-          <input type="text" class="form-control" id="exampleFormControlInput1" required>
+          <label class="form-label">Grade : </label>
+          
+          <select class="form-control" name="grade" required>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+          </select>
+          <label class="form-label">Section/Division : </label>
+          
+          
+          <select class="form-control" name="division" required>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+            <option>E</option>
+          </select>
+          <label for="exampleFormControlInput1" class="form-label">Name : </label>
+          <input type="text" class="form-control" name="name" placeholder="1 - 12" required>
         </div>
         <div class="g-recaptcha" data-sitekey="6Le7dmAlAAAAACAJOM9WDG0AoAEJiTmY4M4oT82v"></div>
         <br/>
-        <button class="g-recaptcha" data-sitekey="6Le7dmAlAAAAACAJOM9WDG0AoAEJiTmY4M4oT82v" data-callback='onSubmit'data-action='submit'>Submit</button>
+        <button type="submit">Submit1</button>
       </form>
+    
     </center>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <br><br><br><br><br><br>
-    <div class="footer">
-      <h4>The End</h4>
-      <small><a href="/Rent/Membership.html">Take Membership</a></small>
-      <br>
-      <a href="/Rent/books.html">See Books</a>
-      <br>
-      <a href="/Rent/contact.html">Contact Us</a>
-      <br>
-      <a href="/Rent/Game.html">Board Games</a>
-      <br>
-      <h4>All Rights Reserved ©</h4>
-      <a href="mailto:shaan.lashkari@gmail.com?Subject:Some Complaint">If you have any complaint regarding to this website, please let me know</a>
-
-  </div>
+ 
     <nav class="navbar sticky-bottom bg-body-tertiary" style="height:80px">
       <div class="container-fluid">
-        <button class="btn btn-success" >Login as teacher</button>
+        <a href="{{ url_for('teacher') }}"><button class="btn btn-success" >Login as teacher</button></a>
       </div>
     </nav>
     
